@@ -1,0 +1,95 @@
+@font-face {
+	font-family: "font";
+	src: url("fonts/font.otf") format("opentype");
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	overflow: hidden;
+}
+
+body {
+	background: url("images/stage.jpg") no-repeat center/cover;
+	font-family: "font", sans-serif;
+	font-weight: normal;
+	font-style: normal;
+	user-select: none;
+	-webkit-user-select: none;
+	-webkit-touch-callout: none;
+	cursor: url(images/rainbow-smash.png) 20 0, url(images/axe.png) 20 0, auto;
+}
+
+h1 {
+	color: #fff;
+	font-size: 5vh;
+	text-align: center;
+	margin: 5px;
+}
+
+p {
+	text-align: center;
+	color: #fff;
+	font-size: 1.5em;
+	margin: 5px;
+}
+
+img:first-of-type {
+	height: 80vh;
+	user-select: none;
+ 	display: block;
+ 	margin: auto;
+}
+
+img:not(:first-of-type) {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  animation: rain 3s linear;
+  pointer-events: none;
+}
+
+@keyframes rain {
+  from {
+    top: 0;
+    opacity: 1.5;
+  }
+  to {
+    top: 100%;
+    transform: rotate(30rad);
+    opacity: 0;
+  }
+}
+
+div:first-of-type {
+	position: absolute;
+	padding: 15px 30px;
+	left: 10px;
+	bottom: 10px;
+	border-radius: 20px;
+	font-size: 30px;
+	text-align: center;
+	user-select: none;
+	-webkit-user-select: none;
+	background: #F49D50;
+	color: #fff;
+	-webkit-transition-duration: 0.4s; 
+    	transition-duration: 0.4s;
+    	font-family: "font";
+}
+div:first-of-type:hover {
+	background-color: white; 
+    	color: #F49D50; 
+    	user-select: none;
+    	-webkit-user-select: none;
+}
+
+div:nth-of-type(2) {
+	position: absolute;
+	bottom: 5px;
+	right: 5px;
+	color: #fff;
+	font-size: 21px;
+
+}
